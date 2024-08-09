@@ -50,7 +50,7 @@ class ChannelAttention_HSFPN(nn.Module):
 
 class DLSA(nn.Module):
     '''
-    Dynamic lightweight spatial attention (DLSA)
+    Multi-scale adaptive spatial attention （MASA）
     '''
     def __init__(self, channels):
         super(DLSA, self).__init__()
@@ -111,9 +111,7 @@ class SPPF1(nn.Module):
 
     def __init__(self, c1, c2, k=5):
         """
-        Initializes the SPPF layer with given input/output channels and kernel size.
-
-        This module is equivalent to SPP(k=(5, 9, 13)).
+       SPPF-Mamba
         """
         super().__init__()
         c_ = c1 // 2  # hidden channels
